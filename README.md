@@ -1,4 +1,3 @@
-<h2># Plugin-Starter<h2><br>
+<h2>iCIMS Job Search API<h2><br>
 <hr>
-<p>FreshySites Plugin Starter - Template Repo</p>
-<a href="https://github.com/FreshyMichael/Plugin-Starter/generate">Use this template</a>
+use shortcode [icims_job_listing] to output search input and results output
