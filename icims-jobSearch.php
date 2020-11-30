@@ -1,7 +1,7 @@
 <?php
 /**
-* Plugin Name: Add PluginName
-* Plugin URI: https://github.com/FreshyMichael/Plugin-Starter
+* Plugin Name: iCIMS Job Search
+* Plugin URI: https://github.com/FreshyMichael/icims-jobSearch
 * Description: Add a Description
 * Version: 1.0.0
 * Author: FreshySites
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
 
-/* PluginName Start */
+/* iCIMS Job Search Start */
 //______________________________________________________________________________
 
 
@@ -24,10 +24,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 // ***IMPORTANT*** Update this path to New Github Repository Master Branch Path
-	'https://github.com/FreshyMichael/Plugin-Starter',
+	'https://github.com/FreshyMichael/icims-jobSearch',
 	__FILE__,
 // ***IMPORTANT*** Update this to New Repository Master Branch Path
-	'Plugin-Starter'
+	'icims-jobSearch'
 );
 //Enable Releases
 $myUpdateChecker->getVcsApi()->enableReleaseAssets();
@@ -42,5 +42,5 @@ $myUpdateChecker->getVcsApi()->enableReleaseAssets();
 //$myUpdateChecker->setBranch('stable-branch-name');
 
 //______________________________________________________________________________
-/* PluginName End */
+/* iCIMS Job Search End */
 ?>
