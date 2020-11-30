@@ -2,7 +2,7 @@
 /**
 * Plugin Name: iCIMS Job Search
 * Plugin URI: https://github.com/FreshyMichael/icims-jobSearch
-* Description: Add a Description
+* Description: iCIMS Search API custom integration
 * Version: 1.0.0
 * Author: FreshySites
 * Author URI: https://freshysites.com/
@@ -15,8 +15,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* iCIMS Job Search Start */
 //______________________________________________________________________________
+//WP Enqueue Styles
+function icims_styles() {
+    $dir = plugin_dir_url(__FILE__);
+    wp_enqueue_style('icims-styles', $dir . 'includes/css/style.css', array(), '1.0.0', 'all');
+}
+add_action( 'wp_enqueue_scripts','icims_styles' );
 
-
+//iCIMS Jobs API Search and Output Shortcode
+add_shortcode('icims_job_listing','icims_job_listings');
+function icims_job_listings(){
+	$request = wp_remote_get('https://api.icims.com/customers/7396/search/jobs');
+	//Error Handling
+	if (is_wp_error($request)){
+		return false; //bail on request early
+	}
+	$body = wp_remote_retrieve_body( $request );
+	$data = json_decode($body);
+	if (! empty($data )){
+		echo'<ul>';
+		foreach( $data->jobs as $job){
+			echo '<li>';
+				echo 'Job found';
+			echo '</li>';
+		}
+		echo '</ul>';
+	}
+}
 //______________________________________________________________________________
 // All About Updates
 
