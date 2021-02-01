@@ -24,7 +24,7 @@ function icims_jobs_search_simple(){
 </div>
 </div>
  
-<div class="" id="searchFormAdvancedFilters">
+<div class="" id="searchFormAdvancedFilters" style="display:none;">
 
 <div class="iCIMS_Table">
 <div class="iCIMS_TableRow">
@@ -262,9 +262,9 @@ Find jobs within
 
 </form> <?php '
 
-	$returnJobString = ob_get_contents();
+	$returnSimpleJobString = ob_get_contents();
 	ob_end_clean();
-	return $returnJobString
+	return $returnSimpleJobString
 		
 }
 
