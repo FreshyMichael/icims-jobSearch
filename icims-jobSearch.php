@@ -22,26 +22,16 @@ function icims_styles() {
 }
 add_action( 'wp_enqueue_scripts','icims_styles' );
 
-//iCIMS Jobs API Search and Output Shortcode
-add_shortcode('icims_job_listing','icims_job_listings');
-function icims_job_listings(){
-	$request = wp_remote_get('https://api.icims.com/customers/7396/search/jobs');
-	//Error Handling
-	if (is_wp_error($request)){
-		return false; //bail on request early
-	}
-	$body = wp_remote_retrieve_body( $request );
-	$data = json_decode($body);
-	if (! empty($data )){
-		echo'<ul>';
-		foreach( $data->jobs as $job){
-			echo '<li>';
-				echo 'Job found';
-			echo '</li>';
-		}
-		echo '</ul>';
-	}
+function include_the_JobSearch_shortcode(){
+	
+	define('PLUGIN_DIR' , dirname(__FILE__).'/');
+
+	include 'includes/icimsFullSearch.php';
+	include 'includes/icimsSimpleSearch.php';
+	
 }
+add_action('after_setup_theme' , 'include_the_JobSearch_shortcode');
+
 //______________________________________________________________________________
 // All About Updates
 
