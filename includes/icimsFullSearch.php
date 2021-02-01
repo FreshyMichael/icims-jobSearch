@@ -151,7 +151,7 @@ Find jobs within
 </div>
 </div>
 </div>
-</form> <?php '
+</form> <?php ';
 
 	$returnFullJobString = ob_get_contents();
 	ob_end_clean();
