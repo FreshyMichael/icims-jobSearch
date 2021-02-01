@@ -2,7 +2,7 @@
 /**
 * Plugin Name: iCIMS Job Search
 * Plugin URI: https://github.com/FreshyMichael/icims-jobSearch
-* Description: iCIMS Search API custom integration
+* Description: Add Shortcodes for Advantus Federal iCIMS Job Search
 * Version: 1.0.0
 * Author: FreshySites
 * Author URI: https://freshysites.com/
