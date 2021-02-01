@@ -3,9 +3,9 @@
 add_shortcode('icims_simple_search','icims_jobs_search_simple');
 
 function icims_jobs_search_simple(){
- 
-	ob_start();
-	echo ' ?>
+ 	
+
+ ob_start(); ?>
 	
 	<form accept-charset="utf-8" id="searchForm" name="searchForm" action="https://careers-avantus.icims.com/jobs/search?in_iframe=1&amp;hashed=-435653955" onsubmit="return VerifySearchParameters();" target="_blank" style="margin:auto; max-width:90%">
 <input type="hidden" name="ss" value="1">
@@ -260,7 +260,7 @@ Find jobs within
 
 </div>
 
-</form> <?php ';
+</form> <?php
 
 	$returnSimpleJobString = ob_get_contents();
 	ob_end_clean();
