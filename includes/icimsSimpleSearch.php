@@ -264,7 +264,7 @@ Find jobs within
 
 	$returnSimpleJobString = ob_get_contents();
 	ob_end_clean();
-	return $returnSimpleJobString
+	return $returnSimpleJobString;
 		
 }
 
