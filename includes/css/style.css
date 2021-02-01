@@ -1,0 +1,66 @@
+.iCIMS_PrimaryButton:hover{
+  background-color:#FC4C02 !important;
+  cursor:pointer;
+}
+.iCIMS_PrimaryButton{
+  background-color:#003057 !important;
+  cursor:pointer;
+}
+.iCIMS_InfoData{
+  margin-top:10px;
+}
+
+.Field_SearchMultiSelect{
+  height:35px;
+  border:none;background:#eee;
+  width:100%;
+}
+.iCIMS_RoundedInput{
+  height:35px;
+  border:none;
+  background:#eee;
+  width:100%;
+}
+#searchForm label{
+  display:block;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+#jsb_f_keywords_i{
+  min-width:80%;
+  border:none;
+  background:#eee;
+  height:35px;
+  max-width:80%;
+}
+#jsb_form_submit_i{
+  background-color:#307fe2;
+  color:white;
+  border:none;
+  height:35px;
+  width:19.5%;
+}
+#jsb_f_zipcode_i{
+  min-width:100%;
+}
+#jsb_f_zipradius_s{
+  min-width:100%;
+}
+@media (max-width:897px){
+
+  #jsb_f_keywords_i{
+    min-width:100%!important;
+  }
+  #jsb_form_submit_i{
+  min-width:100%;
+  margin-top:25px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+}
+
+a#advanceSearchToggle{
+  text-decoration:none;
+  margin-top:25px!important;
+}
