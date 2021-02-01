@@ -1,6 +1,6 @@
 <?php
 
-add_shortcode('icims_simple_search','icims_jobs_search_simple')
+add_shortcode('icims_simple_search','icims_jobs_search_simple');
 
 function icims_jobs_search_simple(){
  
