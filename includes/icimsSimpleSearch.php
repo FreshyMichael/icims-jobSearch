@@ -260,7 +260,7 @@ Find jobs within
 
 </div>
 
-</form> <?php '
+</form> <?php ';
 
 	$returnSimpleJobString = ob_get_contents();
 	ob_end_clean();
