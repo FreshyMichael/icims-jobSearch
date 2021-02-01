@@ -1,4 +1,4 @@
-<h2>iCIMS Job Search API<h2><br>
+<h2>iCIMS Job Search<h2><br>
 <hr>
 use shortcode [icims_full_search] to output the full search form
 <br/>
